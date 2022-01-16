@@ -94,7 +94,7 @@ namespace ApiResource
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors();
+            app.UseCors("default");
 
             app.UseHttpsRedirection();
 
