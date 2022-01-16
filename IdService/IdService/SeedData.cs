@@ -40,6 +40,20 @@ namespace IdService
 
         private static void EnsureSeedData(ConfigurationDbContext context)
         {
+            if (!context.ApiScopes.Any())
+            {
+                Log.Debug("ApiScopes being populated");
+                foreach (var scope in Config.ApiScopes.ToList())
+                {
+                    context.ApiScopes.Add(scope.ToEntity());
+                }
+                context.SaveChanges();
+            }
+            else
+            {
+                Log.Debug("ApiScopes already populated");
+            }
+
             if (!context.Clients.Any())
             {
                 Log.Debug("Clients being populated");
@@ -70,16 +84,16 @@ namespace IdService
 
             if (!context.ApiResources.Any())
             {
-                Log.Debug("ApiScopes being populated");
-                foreach (var resource in Config.ApiScopes.ToList())
+                Log.Debug("ApiResources being populated");
+                foreach (var resource in Config.ApiResources.ToList())
                 {
-                    context.ApiScopes.Add(resource.ToEntity());
+                    context.ApiResources.Add(resource.ToEntity());
                 }
                 context.SaveChanges();
             }
             else
             {
-                Log.Debug("ApiScopes already populated");
+                Log.Debug("ApiResources already populated");
             }
         }
     }
