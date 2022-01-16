@@ -55,6 +55,8 @@ namespace WebClient
                     options.SaveTokens = true;
                     options.GetClaimsFromUserInfoEndpoint = true;
 
+                    options.Scope.Add("openid");
+                    options.Scope.Add("profile");
                     options.Scope.Add("test.api");
                     options.Scope.Add("identity.api");
                 });
