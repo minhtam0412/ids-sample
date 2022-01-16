@@ -1,8 +1,9 @@
 using System;
 using IdentityServer4.Models;
+using IdService.Quickstart.Account;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityServerHost.Quickstart.UI
+namespace IdService.Quickstart
 {
     public static class Extensions
     {
