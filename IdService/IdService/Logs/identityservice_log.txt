@@ -1,0 +1,15 @@
+2022-01-17 08:42:35.701 +07:00 [INF] Starting host...
+2022-01-17 08:42:35.846 +07:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-01-17 08:42:35.945 +07:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-01-17 08:42:35.945 +07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-01-17 08:42:35.946 +07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-01-17 08:42:35.946 +07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-01-17 08:42:35.946 +07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-01-17 08:42:35.947 +07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-01-17 08:42:39.535 +07:00 [DBG] Login Url: /Account/Login
+2022-01-17 08:42:39.556 +07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-01-17 08:42:39.575 +07:00 [DBG] Logout Url: /Account/Logout
+2022-01-17 08:42:39.578 +07:00 [DBG] ConsentUrl Url: /consent
+2022-01-17 08:42:39.581 +07:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-01-17 08:42:39.582 +07:00 [DBG] Error Url: /home/error
+2022-01-17 08:42:39.583 +07:00 [DBG] Error Id Parameter: errorId

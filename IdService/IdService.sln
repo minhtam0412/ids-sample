@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiResources", "ApiResource
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{BB775475-CDEE-4575-9751-D29F43D87CE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiResource", "ApiResource\ApiResource.csproj", "{D8386CC1-BCC4-4E3D-B405-9C78CC17F39E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiResource", "ApiResource\ApiResource.csproj", "{D8386CC1-BCC4-4E3D-B405-9C78CC17F39E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{CDAAC219-E1BC-47CE-B33C-006064E37F1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "WebClient\WebClient.csproj", "{CDAAC219-E1BC-47CE-B33C-006064E37F1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
