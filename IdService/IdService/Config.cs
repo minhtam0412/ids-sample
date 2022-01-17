@@ -53,6 +53,29 @@ namespace IdService
                     PostLogoutRedirectUris = new List<string> { "http://localhost:4200/" },
                     AllowedCorsOrigins = new List<string> { "http://localhost:4200" },
                     AllowAccessTokensViaBrowser = true,
+
+                },
+                // Postman with secret
+                new Client
+                {
+                    ClientId = "postman",
+                    ClientName = "Postman Client",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AllowedScopes = new List<string> { "openid", "profile", "identity.api" ,"test.api", "offline_access"  },
+                    ClientSecrets = new []{new Secret("PostmanSecret".Sha256())},
+                    AbsoluteRefreshTokenLifetime = 864000,//10 days
+                    AllowOfflineAccess = true
+                },
+                // Postman without secret
+                new Client
+                {
+                    ClientId = "PostmanWithoutSecret",
+                    ClientName = "Postman Client Without Secret",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AllowedScopes = new List<string> { "openid", "profile", "identity.api" ,"test.api", "offline_access"  },
+                    AbsoluteRefreshTokenLifetime = 864000,//10 days
+                    RequireClientSecret = false,
+                    AllowOfflineAccess = true
                 }
             };
 

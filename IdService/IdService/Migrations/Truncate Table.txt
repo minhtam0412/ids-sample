@@ -1,0 +1,10 @@
+﻿TRUNCATE TABLE ClientClaims;
+TRUNCATE TABLE ClientCorsOrigins;
+TRUNCATE TABLE ClientGrantTypes;
+TRUNCATE TABLE ClientIdPRestrictions;
+TRUNCATE TABLE ClientPostLogoutRedirectUris;
+TRUNCATE TABLE ClientProperties;
+TRUNCATE TABLE ClientRedirectUris;
+TRUNCATE TABLE ClientScopes;
+TRUNCATE TABLE ClientSecrets;
+DELETE FROM Clients;
