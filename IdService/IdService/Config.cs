@@ -42,40 +42,17 @@ namespace IdService
                     AllowOfflineAccess = true,
                     AllowedScopes = { "openid", "profile", "identity.api","test.api" }
                 },
-
-                //SPA client using Code flow
-                new Client
-                {
-                    ClientId = "spaclient",
-                    ClientName = "SPA Client",
-                    ClientUri = "https://localhost:5003",
-                    RequireConsent = false,
-                    AllowedGrantTypes = GrantTypes.Code,
-                    RequirePkce = true,
-                    RequireClientSecret = false,
-                    AllowAccessTokensViaBrowser = true,
-
-                    RedirectUris =
-                    {
-                        "https://localhost:5003/index.html",
-                        "https://localhost:5003/callback.html"
-                    },
-
-                    PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
-                    AllowedCorsOrigins = { "https://localhost:5003" },
-
-                    AllowedScopes = { "openid", "profile", "identity.api" ,"test.api" }
-                },
+                // Angular
                 new Client
                 {
                     ClientId = "angular_spa",
                     ClientName = "Angular 4 Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowedScopes = new List<string> { "openid", "profile", "identity.api" ,"test.api"  },
-                    RedirectUris = new List<string> { "http://localhost:4200/auth-callback" },
+                    RedirectUris = new List<string> { "http://localhost:4200/auth-callback","http://localhost:4200/assets/silent-refresh.html" },
                     PostLogoutRedirectUris = new List<string> { "http://localhost:4200/" },
                     AllowedCorsOrigins = new List<string> { "http://localhost:4200" },
-                    AllowAccessTokensViaBrowser = true
+                    AllowAccessTokensViaBrowser = true,
                 }
             };
 

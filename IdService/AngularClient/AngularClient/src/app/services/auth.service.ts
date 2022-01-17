@@ -50,6 +50,8 @@ export function getClientSettings(): UserManagerSettings {
     response_type: 'id_token token',
     scope: 'openid profile identity.api test.api',
     filterProtocolClaims: true,
-    loadUserInfo: true
+    loadUserInfo: true,
+    automaticSilentRenew: true,
+    silent_redirect_uri: 'http://localhost:4200/assets/silent-refresh.html'
   };
 }

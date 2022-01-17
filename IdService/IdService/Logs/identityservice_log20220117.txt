@@ -1,0 +1,52 @@
+2022-01-17 22:29:07.103 +07:00 [INF] Starting host...
+2022-01-17 22:29:07.420 +07:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-01-17 22:29:07.740 +07:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-01-17 22:29:07.745 +07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-01-17 22:29:07.747 +07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-01-17 22:29:07.749 +07:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-01-17 22:29:07.761 +07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-01-17 22:29:07.765 +07:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-01-17 22:29:11.799 +07:00 [DBG] Login Url: /Account/Login
+2022-01-17 22:29:11.815 +07:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-01-17 22:29:11.817 +07:00 [DBG] Logout Url: /Account/Logout
+2022-01-17 22:29:11.818 +07:00 [DBG] ConsentUrl Url: /consent
+2022-01-17 22:29:11.822 +07:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-01-17 22:29:11.823 +07:00 [DBG] Error Url: /home/error
+2022-01-17 22:29:11.827 +07:00 [DBG] Error Id Parameter: errorId
+2022-01-17 22:29:12.128 +07:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-01-17 22:29:12.168 +07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-01-17 22:29:12.180 +07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-01-17 22:29:12.191 +07:00 [DBG] Start discovery request
+2022-01-17 22:29:15.347 +07:00 [DBG] Found ["profile","openid","test.api","identity.api"] as all scopes, and ["identity.api","test.api"] as API resources
+2022-01-17 22:29:15.937 +07:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2022-01-17 22:29:15.940 +07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2022-01-17 22:29:15.941 +07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-01-17 22:29:15.943 +07:00 [DBG] Start key discovery request
+2022-01-17 22:29:16.009 +07:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-01-17 22:29:16.014 +07:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-01-17 22:29:16.015 +07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-01-17 22:29:16.018 +07:00 [DBG] Start authorize request
+2022-01-17 22:29:16.023 +07:00 [DBG] No user present in authorize request
+2022-01-17 22:29:16.025 +07:00 [DBG] Start authorize request protocol validation
+2022-01-17 22:29:16.603 +07:00 [DBG] webclient found in database: true
+2022-01-17 22:29:16.611 +07:00 [DBG] client configuration validation for client webclient succeeded.
+2022-01-17 22:29:16.626 +07:00 [DBG] Checking for PKCE parameters
+2022-01-17 22:29:16.627 +07:00 [DBG] No PKCE used.
+2022-01-17 22:29:16.709 +07:00 [DBG] Found ["profile","openid"] identity scopes in database
+2022-01-17 22:29:16.766 +07:00 [DBG] Found [] API resources in database
+2022-01-17 22:29:16.791 +07:00 [DBG] Found ["test.api","identity.api"] scopes in database
+2022-01-17 22:29:16.805 +07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-01-17 22:29:16.818 +07:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"webclient","ClientName":"Web Client","RedirectUri":"https://localhost:5002/signin-oidc","AllowedRedirectUris":["https://localhost:5002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile test.api identity.api","State":"CfDJ8KAJnSD7L9pOqthyJq7PFiKZ-iv3EOCaFetlM2Ass_9NwhO5c55PvNydFDtlVhc3gcM4xa16yOZIQGd4w-1Mm6xS5yZNyoxaQZS4Su7qpCcKh9_aN65rGQkImaQpZ4oY6UgXtpy1PgkxacFQMZ8H3tinvtzMr5-M8O9IWNF4eVv5RDCxpEG-YJqQtAy5t2DQ4pef5w04Mg5x8IVkl7SKO0mKnFD8FnrjIu-b_sqmHqcwOGOVfq-ac5qQRteDYxav8sx7N6_sMwD2CZNDzEjet587SMhEvZc1fyLztZbH3nnJ","UiLocales":null,"Nonce":"637780301559893910.MjZmZDhkY2EtNjQxNC00NmRjLWExNTEtNzM2ODkxM2E5YWQ4NDY5ZDQ0NmItYjNjZi00OThlLTkwNjEtODVmN2JjMjA2MGMx","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"","Raw":{"client_id":"webclient","redirect_uri":"https://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile test.api identity.api","response_mode":"form_post","nonce":"637780301559893910.MjZmZDhkY2EtNjQxNC00NmRjLWExNTEtNzM2ODkxM2E5YWQ4NDY5ZDQ0NmItYjNjZi00OThlLTkwNjEtODVmN2JjMjA2MGMx","state":"CfDJ8KAJnSD7L9pOqthyJq7PFiKZ-iv3EOCaFetlM2Ass_9NwhO5c55PvNydFDtlVhc3gcM4xa16yOZIQGd4w-1Mm6xS5yZNyoxaQZS4Su7qpCcKh9_aN65rGQkImaQpZ4oY6UgXtpy1PgkxacFQMZ8H3tinvtzMr5-M8O9IWNF4eVv5RDCxpEG-YJqQtAy5t2DQ4pef5w04Mg5x8IVkl7SKO0mKnFD8FnrjIu-b_sqmHqcwOGOVfq-ac5qQRteDYxav8sx7N6_sMwD2CZNDzEjet587SMhEvZc1fyLztZbH3nnJ","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2022-01-17 22:29:16.841 +07:00 [INF] Showing login: User is not authenticated
+2022-01-17 22:29:16.896 +07:00 [DBG] Start authorize request protocol validation
+2022-01-17 22:29:16.928 +07:00 [DBG] webclient found in database: true
+2022-01-17 22:29:16.928 +07:00 [DBG] client configuration validation for client webclient succeeded.
+2022-01-17 22:29:16.932 +07:00 [DBG] Checking for PKCE parameters
+2022-01-17 22:29:16.933 +07:00 [DBG] No PKCE used.
+2022-01-17 22:29:16.937 +07:00 [DBG] Found ["profile","openid"] identity scopes in database
+2022-01-17 22:29:16.940 +07:00 [DBG] Found [] API resources in database
+2022-01-17 22:29:16.947 +07:00 [DBG] Found ["test.api","identity.api"] scopes in database
+2022-01-17 22:29:16.949 +07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-01-17 22:29:16.973 +07:00 [DBG] webclient found in database: true
+2022-01-17 22:29:16.974 +07:00 [DBG] client configuration validation for client webclient succeeded.
