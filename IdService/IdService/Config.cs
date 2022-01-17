@@ -65,6 +65,17 @@ namespace IdService
                     AllowedCorsOrigins = { "https://localhost:5003" },
 
                     AllowedScopes = { "openid", "profile", "identity.api" ,"test.api" }
+                },
+                new Client
+                {
+                    ClientId = "angular_spa",
+                    ClientName = "Angular 4 Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowedScopes = new List<string> { "openid", "profile", "identity.api" ,"test.api"  },
+                    RedirectUris = new List<string> { "http://localhost:4200/auth-callback" },
+                    PostLogoutRedirectUris = new List<string> { "http://localhost:4200/" },
+                    AllowedCorsOrigins = new List<string> { "http://localhost:4200" },
+                    AllowAccessTokensViaBrowser = true
                 }
             };
 
