@@ -35,6 +35,10 @@ export class AuthService {
       this.user = user;
     });
   }
+
+  signOut() {
+    return this.manager.signoutRedirect();
+  }
 }
 
 export function getClientSettings(): UserManagerSettings {

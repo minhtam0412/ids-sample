@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 namespace ApiResource
@@ -71,7 +72,7 @@ namespace ApiResource
             {
                 options.Authority = "https://localhost:5000";
                 options.RequireHttpsMetadata = true;
-                options.Audience = "test.api";
+                //options.Audience = "test.api";
             });
 
             services.AddCors(options =>
