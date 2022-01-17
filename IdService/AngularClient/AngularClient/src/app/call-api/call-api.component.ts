@@ -8,19 +8,19 @@ import {AuthService} from '../services/auth.service';
   styles: []
 })
 export class CallApiComponent implements OnInit {
-  response: any;
+  response: any[];
 
   constructor(private http: HttpClient, private authService: AuthService) {
   }
 
   ngOnInit() {
-    let x = this.authService.getAuthorizationHeaderValue();
+    const x = this.authService.getAuthorizationHeaderValue();
     console.log(x);
     const headers = new HttpHeaders({Authorization: this.authService.getAuthorizationHeaderValue()});
 
     this.http.get('https://localhost:5001/api/Test', {headers})
       .subscribe(response => {
-        this.response = response;
+        this.response = response as any[];
         console.log(response);
       });
   }

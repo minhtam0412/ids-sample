@@ -72,7 +72,11 @@ namespace ApiResource
             {
                 options.Authority = "https://localhost:5000";
                 options.RequireHttpsMetadata = true;
-                //options.Audience = "test.api";
+                options.Audience = "test.api";
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateAudience = false,
+                };
             });
 
             services.AddCors(options =>
@@ -98,6 +102,8 @@ namespace ApiResource
             app.UseCors("default");
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseRouting();
 
