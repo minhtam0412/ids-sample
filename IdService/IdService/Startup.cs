@@ -58,6 +58,7 @@ namespace IdService
                 // see https://identityserver4.readthedocs.io/en/latest/topics/resources.html
                 options.EmitStaticAudienceClaim = true;
             })
+                // Bind user type
                 .AddAspNetIdentity<ApplicationUser>()
                 // this adds the config data from DB (clients, resources, CORS)
                 .AddConfigurationStore(options =>
