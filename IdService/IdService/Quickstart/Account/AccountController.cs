@@ -118,7 +118,7 @@ namespace IdService.Quickstart.Account
 
                 if (result.Succeeded)
                 {
-                    await _emailSender.SendEmailAsync(new Message(new string[] { "minhtam0412@gmail.com" }, "Login Succeeded!", "Your email logined suceeded!"));
+                    await _emailSender.SendEmailAsync(new Message(new string[] { "minhtam0412@gmail.com" }, "Login Succeeded!", "Your email login suceeded!"));
                     if (context != null)
                     {
                         // we can trust model.ReturnUrl since GetAuthorizationContextAsync returned non-null
