@@ -6,6 +6,8 @@ using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using EmailService;
+using EmailService.Model;
 using IdentityModel;
 using IdentityServer4.Events;
 using IdentityServer4.Extensions;
@@ -36,13 +38,14 @@ namespace IdService.Quickstart.Account
         private readonly IClientStore _clientStore;
         private readonly IAuthenticationSchemeProvider _schemeProvider;
         private readonly IEventService _events;
+        private IEmailSender _emailSender;
 
         public AccountController(
             IIdentityServerInteractionService interaction,
             IClientStore clientStore,
             IAuthenticationSchemeProvider schemeProvider,
             IEventService events, UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
+            SignInManager<ApplicationUser> signInManager, IEmailSender emailSender,
             TestUserStore users = null)
         {
             _interaction = interaction;
@@ -51,6 +54,7 @@ namespace IdService.Quickstart.Account
             _events = events;
             _userManager = userManager;
             _signInManager = signInManager;
+            _emailSender = emailSender;
         }
 
         /// <summary>
@@ -114,6 +118,7 @@ namespace IdService.Quickstart.Account
 
                 if (result.Succeeded)
                 {
+                    await _emailSender.SendEmailAsync(new Message(new string[] { "minhtam0412@gmail.com" }, "Login Succeeded!", "Your email logined suceeded!"));
                     if (context != null)
                     {
                         // we can trust model.ReturnUrl since GetAuthorizationContextAsync returned non-null
@@ -345,6 +350,11 @@ namespace IdService.Quickstart.Account
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             var user = new ApplicationUser
             {
                 UserName = model.UserName,
